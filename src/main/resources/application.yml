@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oschina_news?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root # 你的MySQL用户名
+    password: root # 你的MySQL密码
+
+# MyBatis-Plus配置（可选）
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml # Mapper.xml文件路径
+  type-aliases-package: com.test.oschina.domain # 实体类包路径
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印SQL日志（开发环境用）
